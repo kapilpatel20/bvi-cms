@@ -1,69 +1,30 @@
-Symfony Standard Edition
-========================
+*******Documentation********
+@Note: This bundle has dependency on KNP paginator bundle. If KNP Paginator bundle not installed then please do first install KNP Paginator bundle using following document ref url:
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+URL: https://github.com/KnpLabs/KnpPaginatorBundle
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
+Run below command to install from composer
 
-What's inside?
---------------
+composer require kapilpatel20/bvi-cms dev-master
 
-The Symfony Standard Edition is configured with the following defaults:
+Add bundle in AppKernel.php in registerBundles function
 
-  * An AppBundle you can use to start coding;
+new Bvi\CmsBundle\BviCmsBundle(),
 
-  * Twig as the only configured template engine;
+Export route file in your app/config/routing.yml as below
 
-  * Doctrine ORM/DBAL;
+bvi_cms:
+    resource: "@BviCmsBundle/Resources/config/routing.yml"
+    prefix:   /cms
 
-  * Swiftmailer;
+Install assets using below command
 
-  * Annotations enabled for everything.
+php app/console assets:install
 
-It comes pre-configured with the following bundles:
+Update your db schema using belwo command
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+php app/console doctrine:schema:update --force
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+@Note: This bundle has dependency on KNP paginator bundle. If KNP Paginator bundle not installed then please do first install KNP Paginator bundle using following document ref url:
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
-
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
-
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
-
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
-
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
-
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
-
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/2.8/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/2.8/doctrine.html
-[8]:  https://symfony.com/doc/2.8/templating.html
-[9]:  https://symfony.com/doc/2.8/security.html
-[10]: https://symfony.com/doc/2.8/email.html
-[11]: https://symfony.com/doc/2.8/logging.html
-[12]: https://symfony.com/doc/2.8/assetic/asset_management.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
+URL: https://github.com/KnpLabs/KnpPaginatorBundle  
