@@ -1,6 +1,6 @@
 <?php
 
-namespace Bvi\CmsBundle\Repository;
+namespace BviCmsBundle\Repository;
 
 use Doctrine\ORM\EntityRepository;
 

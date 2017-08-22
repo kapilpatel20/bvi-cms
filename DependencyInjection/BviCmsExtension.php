@@ -1,6 +1,6 @@
 <?php
 
-namespace Bvi\CmsBundle\DependencyInjection;
+namespace BviCmsBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

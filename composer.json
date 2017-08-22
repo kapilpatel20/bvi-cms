@@ -11,6 +11,9 @@
         "Cms pages Template-Static pages"
     ],
     "license": "proprietary",
+    "require": {
+        "knplabs/knp-paginator-bundle": "^2.6"
+    },
     "autoload": {
         "psr-4": {"BviCmsBundle\\": ""}
     },

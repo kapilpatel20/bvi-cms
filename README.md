@@ -9,7 +9,7 @@ composer require kapilpatel20/bvi-cms dev-master
 
 Add bundle in AppKernel.php in registerBundles function
 
-new Bvi\CmsBundle\BviCmsBundle(),
+new BviCmsBundle\BviCmsBundle(),
 
 Export route file in your app/config/routing.yml as below
 

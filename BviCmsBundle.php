@@ -1,6 +1,6 @@
 <?php
 
-namespace Bvi\CmsBundle;
+namespace BviCmsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

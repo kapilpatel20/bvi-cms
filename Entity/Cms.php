@@ -1,6 +1,6 @@
 <?php
 
-namespace Bvi\CmsBundle\Entity;
+namespace BviCmsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Cms
  *
  * @ORM\Table(name="cms")
- * @ORM\Entity(repositoryClass="Bvi\CmsBundle\Repository\CmsRepository")
+ * @ORM\Entity(repositoryClass="BviCmsBundle\Repository\CmsRepository")
  */
 class Cms
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Bvi\CmsBundle\Controller;
+namespace BviCmsBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Bvi\CmsBundle\Entity\Cms;
-use Bvi\CmsBundle\Form\CmsForm;
+use BviCmsBundle\Entity\Cms;
+use BviCmsBundle\Form\CmsForm;
 use DateTime;
 
 class CmsController extends Controller {
