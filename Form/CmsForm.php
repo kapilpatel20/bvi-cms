@@ -22,7 +22,7 @@ class CmsForm extends AbstractType {
 
     public function setDefaultOptions(OptionsResolverInterface $resolver) {
         $resolver->setDefaults(array(
-            'data_class' => 'Bvi\CmsBundle\Entity\Cms'
+            'data_class' => 'BviCmsBundle\Entity\Cms'
         ));
     }
 

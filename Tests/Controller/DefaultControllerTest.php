@@ -1,6 +1,6 @@
 <?php
 
-namespace Bvi\CmsBundle\Tests\Controller;
+namespace BviCmsBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

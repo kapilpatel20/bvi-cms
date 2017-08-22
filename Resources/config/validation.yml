@@ -1,4 +1,4 @@
-Bvi\CmsBundle\Entity\Cms:
+BviCmsBundle\Entity\Cms:
     constraints:
         - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
             fields: [title]
