@@ -62,7 +62,12 @@ class CmsController extends Controller {
                 
                 $objCms->setSlug();
                 $objCms->setCreatedat(new DateTime());
-                $objCms->setCreatedby(1);
+                $user = $this->get('security.context')->getToken()->getUser();
+                if (is_object($user)) {
+                    $objCms->setCreatedby($user->getId());
+                }else{
+                    $objCms->setCreatedby(1);
+                }
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($objCms);
                 $em->flush();
@@ -99,7 +104,10 @@ class CmsController extends Controller {
                 
                 $objCms->setSlug();
                 $objCms->setUpdatedat(new DateTime());
-                $objCms->setUpdatedby(1);
+                $user = $this->get('security.context')->getToken()->getUser();
+                if (is_object($user)) {
+                    $objCms->setUpdatedby($user->getId());
+                }
                 $em->persist($objCms);
                 $em->flush();
 
@@ -126,7 +134,10 @@ class CmsController extends Controller {
             $status = $objCms->getStatus() == 'Active' ? 'Inactive' : 'Active';
             $objCms->setStatus($status);
             $objCms->setUpdatedat(new DateTime());
-            $objCms->setUpdatedby(1);
+            $user = $this->get('security.context')->getToken()->getUser();
+            if (is_object($user)) {
+                $objCms->setUpdatedby($user->getId());
+            }
             $em->persist($objCms);
             $em->flush();
             $success = true;
